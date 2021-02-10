@@ -1,5 +1,5 @@
 {
-  "name": "anjb-projects/anjb-libs",
+  "name": "anjb-libs",
   "version": "1.0.0",
   "description": "A template for publishing a React + TypeScript package to npm",
   "author": "andrefcasimiro <andrefcasimiro@gmail.com>",
