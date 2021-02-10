@@ -2,7 +2,6 @@ import { gql } from "@apollo/client"
 import { ProductFilter } from "./product-filter"
 import { Product } from "./products"
 import { User } from "./users"
-
 export interface ProductVariant {
   id: number
   product: Product
@@ -15,7 +14,6 @@ export interface ProductVariant {
   createdAt: string
   updatedAt: string
 }
-
 
 export const getProductVariantTitle = (productVariant: ProductVariant): string => {
   const productName = productVariant?.product?.name

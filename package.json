@@ -1,5 +1,5 @@
 {
-  "name": "anjb-libs",
+  "name": "@anjb-projects/anjb-libs",
   "version": "1.0.0",
   "description": "A template for publishing a React + TypeScript package to npm",
   "author": "andrefcasimiro <andrefcasimiro@gmail.com>",
@@ -42,7 +42,11 @@
     "typescript",
     "npm"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anjb-projects/anjb-libs.git"
+  },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@anjb-projects"
+    "registry": "https://npm.pkg.github.com"
   }
 }

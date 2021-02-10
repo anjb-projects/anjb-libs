@@ -93,3 +93,12 @@ export const listSubscriptionsGql = gql`
   }
   ${subscriptionMinimumDetailsFragment}
 `
+
+export const listUserOwnSubscriptionsGql = gql`
+  query listUserOwnSubscriptions($filter: ISubscriptionsFilter) {
+    listUserOwnSubscriptions(filter: $filter) {
+      ...subscriptionMinimumDetailsFragment
+    }
+  }
+  ${subscriptionMinimumDetailsFragment}
+`

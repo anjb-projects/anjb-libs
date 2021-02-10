@@ -103,12 +103,6 @@ export const cancelProductOrderGql = gql`
   }
 `
 
-export const payProductOrderGql =  gql`
-  mutation payProductOrder($input: IProductOrderPayment!) {
-    payProductOrder(input: $input)
-  }
-`
-
 // Queries
 export const getProductOrderByIdGql = gql`
   query getProductOrderById($id: Int!) {

@@ -43,6 +43,21 @@ export function getLastPayment(payments: Payment[]): Payment | null {
   return payments.reverse()[0]
 }
 
+// Mutations
+export const payProductOrderGql = gql`
+  mutation payProductOrder($input: IProductOrderPayment!) {
+    payProductOrder(input: $input)
+  }
+`
+
+export const paySubscriptionGql = gql`
+  mutation paySubscription($input: ISubscriptionPayment!) {
+    paySubscription(input: $input)
+  }
+`
+
+
+// Queries
 export const getPaymentByIdGql = gql`
   query getPaymentById($id: Int!) {
     getPaymentById(id: $id) {
