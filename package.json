@@ -10,7 +10,8 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "deploy": "npm publish"
   },
   "dependencies": {
     "@apollo/client": "^3.3.9",
@@ -40,5 +41,8 @@
     "react",
     "typescript",
     "npm"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@anjb-projects"
+  }
 }
