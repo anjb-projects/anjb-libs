@@ -1,7 +1,5 @@
 import * as yup from 'yup'
 
-export const optional = yup.mixed().nullable()
-
 export const numberRequired = yup.number().typeError('O valor deve ser um número')
 
 export const stringOptional = yup.string().nullable()

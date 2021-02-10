@@ -134,7 +134,6 @@ import {
   formatToDayAndMonth,
 } from './utils/formatters'
 import {  
-  optional,
   numberRequired,
   stringOptional,
   stringRequired,
@@ -283,7 +282,6 @@ export {
   formatToDayAndMonth,
 
   // Validators
-  optional,
   numberRequired,
   stringOptional,
   stringRequired,
