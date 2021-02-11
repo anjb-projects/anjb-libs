@@ -18,6 +18,7 @@ export const loginGql = gql`
 			user {
 				...userFullDetailsFragment
 			}
+			acessToken
 		}
 	}
 	${userFullDetailsFragment}
