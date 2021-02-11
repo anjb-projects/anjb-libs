@@ -1,6 +1,6 @@
 {
   "name": "@anjb-projects/anjb-libs",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A template for publishing a React + TypeScript package to npm",
   "author": "andrefcasimiro <andrefcasimiro@gmail.com>",
   "main": "dist/index.js",
