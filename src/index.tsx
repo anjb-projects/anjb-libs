@@ -105,6 +105,7 @@ import {
   UserProfile,
 } from './data/user-profiles'
 import {
+  createResetPasswordCodeGql,
   resetPasswordGql
 } from './data/recover-password'
 import {
@@ -254,6 +255,7 @@ export {
   UserProfile,
 
   // Recover Password
+  createResetPasswordCodeGql,
   resetPasswordGql,
 
   // Subscription Plans
