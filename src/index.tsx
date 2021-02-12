@@ -2,6 +2,7 @@ import {
   AuthResponse,
   ValidateJwtResponse,
   loginGql,
+  signUpGql,
   validateJwtGql,
 } from './data/auth'
 import {
@@ -151,6 +152,7 @@ export {
   AuthResponse,
   ValidateJwtResponse,
   loginGql,
+  signUpGql,
   validateJwtGql,
   
   // Document categories

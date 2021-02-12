@@ -24,6 +24,17 @@ export const loginGql = gql`
 	${userFullDetailsFragment}
 `;
 
+export const signUpGql = gql`
+	mutation signUp($input: ISignUp!) {
+		signUp(input: $input) {
+			id
+			username
+			email
+			role
+		}
+	}
+`
+
 // Queries
 export const validateJwtGql = gql`
 	query validateJwt {
