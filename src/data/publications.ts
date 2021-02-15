@@ -7,8 +7,6 @@ export enum PublicationStatus {
   IN_DRAFT = 'IN_DRAFT',
   SOFT_DELETED = 'SOFT_DELETED',
 }
-
-
 export interface Publication {
   id: number
   name: string
@@ -118,4 +116,13 @@ export const listPublicationsGql = gql`
     }
   }
   ${publicationMinimumDetailsFragment}
+`
+
+export const listHighlightedPublicationsGql = gql`
+	query listHighlightedPublications {
+		listHighlightedPublications {
+			...publicationMinimumDetailsFragment
+		}
+	}
+	${publicationMinimumDetailsFragment}
 `

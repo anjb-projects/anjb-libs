@@ -92,6 +92,30 @@ import {
   deleteProductGql,
 } from './data/products'
 import {
+  Publication,
+  PublicationStatus,
+  createPublicationGql,
+  updatePublicationGql,
+  deletePublicationGql,
+  getPublicationByIdGql,
+  listPublicationsGql,
+  listHighlightedPublicationsGql,
+} from './data/publications'
+import {
+  PublicationImageUpload,
+  uploadPublicationImageGql,
+  deletePublicationImageGql,
+  listPublicationImageUploadsGql,
+} from './data/publication-image-uploads'
+import {
+  PublicationCategory,
+  createPublicationCategoryGql,
+  updatePublicationCategoryGql,
+  deletePublicationCategoryGql,
+  listPublicationCategoriesGql,
+  getPublicationCategoryByIdGql,
+} from './data/publication-categories'
+import {
   User,
   UserRole,
   formatUserRole,
@@ -241,6 +265,30 @@ export {
   listProductsGql,
   getProductByIdGql,
   deleteProductGql,
+
+  // Publications
+  Publication,
+  PublicationStatus,
+  createPublicationGql,
+  updatePublicationGql,
+  deletePublicationGql,
+  getPublicationByIdGql,
+  listPublicationsGql,
+  listHighlightedPublicationsGql,
+
+  // Publication Image Uploads
+  PublicationImageUpload,
+  uploadPublicationImageGql,
+  deletePublicationImageGql,
+  listPublicationImageUploadsGql,
+
+  // Publication Categories
+  PublicationCategory,
+  createPublicationCategoryGql,
+  updatePublicationCategoryGql,
+  deletePublicationCategoryGql,
+  listPublicationCategoriesGql,
+  getPublicationCategoryByIdGql,
 
   // Users
   UserRole,
