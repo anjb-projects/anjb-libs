@@ -29,7 +29,7 @@ export const publicationMinimumDetailsFragment = gql`
 	fragment publicationMinimumDetailsFragment on PublicationEntity {
 		id
 		name
-		content
+		image
 		publicationCategories {
 			id
 			name
@@ -118,11 +118,22 @@ export const listPublicationsGql = gql`
   ${publicationMinimumDetailsFragment}
 `
 
+
+export const publicationHighlightMinimumDetailsFragment = gql`
+	fragment publicationHighlightMinimumDetailsFragment on PublicationEntity {
+		id
+		name
+		description
+		image
+		createdAt
+		updatedAt
+	}
+`
 export const listHighlightedPublicationsGql = gql`
 	query listHighlightedPublications {
 		listHighlightedPublications {
-			...publicationMinimumDetailsFragment
+			...publicationHighlightMinimumDetailsFragment
 		}
 	}
-	${publicationMinimumDetailsFragment}
+	${publicationHighlightMinimumDetailsFragment}
 `

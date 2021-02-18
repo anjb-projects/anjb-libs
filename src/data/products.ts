@@ -72,6 +72,9 @@ export const productMinimumDetailsFragment = gql`
     subscriberPrice
     isActive
     availableTo
+    productVariants {
+      productImages
+    }
     productCategory {
       id
       name

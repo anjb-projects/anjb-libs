@@ -7,6 +7,8 @@ import {
 } from './data/auth'
 import {
   DocumentCategory,
+  documentCategoriesFullDetailsFragment,
+  documentCategoriesMinimumDetailsFragment,
   createDocumentCategoryGql,
   updateDocumentCategoryGql,
   deleteDocumentCategoryGql,
@@ -14,17 +16,24 @@ import {
   listDocumentCategoriesGql,
 } from './data/document-categories'
 import {
-  DocumentUpload
+  DocumentUpload,
+  uploadDocumentGql,
+  deleteDocumentUploadByPublicPathGql,
+  listDocumentUploadsGql,
  } from './data/document-uploads'
 import {
   Document,
+  documentMinimumDetailsFragment,
+  documentFullDetailsFragment,
   createDocumentGql,
   updateDocumentGql,
   deleteDocumentGql,
   getDocumentByIdGql,
   listDocumentsGql,
 } from './data/documents'
-import { BaseImageUpload} from './data/image-uploads'
+import {
+  BaseImageUpload,
+} from './data/image-uploads'
 import {
    Newsletter,
    subscribeNewsletterGql,
@@ -43,6 +52,8 @@ import {
 } from './data/payments'
 import {
   ProductCategory,
+  productCategoriesMinimumDetailsFragment,
+  productCategoriesFullDetailsFragment,
   createProductCategoryGql,
   updateProductCategoryGql,
   deleteProductCategoryGql,
@@ -69,6 +80,8 @@ import {
 import {
   ProductOrder,
   ProductOrderDetails,
+  productOrdersMinimumDetailsFragment,
+  productOrderDetailsFullDetailsFragment,
   cancelProductOrderGql,
   createProductOrderGql,
   getProductOrderByIdGql,
@@ -77,6 +90,8 @@ import {
 import {
   ProductVariant,
   getProductVariantTitle,
+  productVariantMinimumDetailsFragment,
+  productVariantFullDetailsFragment,
   createProductVariantGql,
   updateProductVariantGql,
   deleteProductVariantGql,
@@ -85,6 +100,8 @@ import {
 } from './data/product-variants'
 import {
   Product,
+  productMinimumDetailsFragment,
+  productFullDetailsFragment,
   createProductGql,
   updateProductGql,
   listProductsGql,
@@ -94,6 +111,9 @@ import {
 import {
   Publication,
   PublicationStatus,
+  publicationFullDetailsFragment,
+  publicationMinimumDetailsFragment,
+  publicationHighlightMinimumDetailsFragment,
   createPublicationGql,
   updatePublicationGql,
   deletePublicationGql,
@@ -109,6 +129,8 @@ import {
 } from './data/publication-image-uploads'
 import {
   PublicationCategory,
+  publicationCategoryMinimumDetailsFragment,
+  publicationCategoryFullDetailsFragment,
   createPublicationCategoryGql,
   updatePublicationCategoryGql,
   deletePublicationCategoryGql,
@@ -119,6 +141,8 @@ import {
   User,
   UserRole,
   formatUserRole,
+  userMinimumDetailsFragment,
+  userFullDetailsFragment,
   createUserGql,
   updateUserGql,
   deleteUserGql,
@@ -135,6 +159,8 @@ import {
 } from './data/recover-password'
 import {
   SubscriptionPlan,
+  subscriptionPlansFullDetailsFragment,
+  subscriptionPlansMinimumDetailsFragment,
   createSubscriptionPlanGql,
   updateSubscriptionPlanGql,
   deleteSubscriptionPlanGql,
@@ -144,6 +170,8 @@ import {
 import {
   Subscription,
   SubscriptionStatus,
+  subscriptionMinimumDetailsFragment,
+  subscriptionFullDetailsFragment,
   getSubscriptionByIdGql,
   listSubscriptionsGql,
   listUserOwnSubscriptionsGql,
@@ -181,6 +209,8 @@ export {
   
   // Document categories
   DocumentCategory,
+  documentCategoriesFullDetailsFragment,
+  documentCategoriesMinimumDetailsFragment,
   createDocumentCategoryGql,
   updateDocumentCategoryGql,
   deleteDocumentCategoryGql,
@@ -189,9 +219,14 @@ export {
 
   // Document Uploads
   DocumentUpload,
+  uploadDocumentGql,
+  deleteDocumentUploadByPublicPathGql,
+  listDocumentUploadsGql,
 
   // Documents
   Document,
+  documentMinimumDetailsFragment,
+  documentFullDetailsFragment,
   createDocumentGql,
   updateDocumentGql,
   deleteDocumentGql,
@@ -218,6 +253,8 @@ export {
 
   // Product Categories
   ProductCategory,
+  productCategoriesMinimumDetailsFragment,
+  productCategoriesFullDetailsFragment,
   createProductCategoryGql,
   updateProductCategoryGql,
   deleteProductCategoryGql,
@@ -244,6 +281,8 @@ export {
   // Product Orders
   ProductOrder,
   ProductOrderDetails,
+  productOrdersMinimumDetailsFragment,
+  productOrderDetailsFullDetailsFragment,
   cancelProductOrderGql,
   createProductOrderGql,
   getProductOrderByIdGql,
@@ -252,6 +291,8 @@ export {
   // Product Variants
   ProductVariant,
   getProductVariantTitle,
+  productVariantMinimumDetailsFragment,
+  productVariantFullDetailsFragment,
   createProductVariantGql,
   updateProductVariantGql,
   deleteProductVariantGql,
@@ -260,6 +301,8 @@ export {
 
   // Products
   Product,
+  productMinimumDetailsFragment,
+  productFullDetailsFragment,
   createProductGql,
   updateProductGql,
   listProductsGql,
@@ -269,6 +312,9 @@ export {
   // Publications
   Publication,
   PublicationStatus,
+  publicationFullDetailsFragment,
+  publicationMinimumDetailsFragment,
+  publicationHighlightMinimumDetailsFragment,
   createPublicationGql,
   updatePublicationGql,
   deletePublicationGql,
@@ -284,6 +330,8 @@ export {
 
   // Publication Categories
   PublicationCategory,
+  publicationCategoryMinimumDetailsFragment,
+  publicationCategoryFullDetailsFragment,
   createPublicationCategoryGql,
   updatePublicationCategoryGql,
   deletePublicationCategoryGql,
@@ -294,6 +342,8 @@ export {
   UserRole,
   User,
   formatUserRole,
+  userMinimumDetailsFragment,
+  userFullDetailsFragment,
   createUserGql,
   updateUserGql,
   deleteUserGql,
@@ -310,6 +360,8 @@ export {
 
   // Subscription Plans
   SubscriptionPlan,
+  subscriptionPlansFullDetailsFragment,
+  subscriptionPlansMinimumDetailsFragment,
   createSubscriptionPlanGql,
   updateSubscriptionPlanGql,
   deleteSubscriptionPlanGql,
@@ -319,6 +371,8 @@ export {
   // Subscriptions
   SubscriptionStatus,
   Subscription,
+  subscriptionMinimumDetailsFragment,
+  subscriptionFullDetailsFragment,
   getSubscriptionByIdGql,
   listSubscriptionsGql,
   listUserOwnSubscriptionsGql,
